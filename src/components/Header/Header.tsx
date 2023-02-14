@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import NavBarDesktop from './NavBarDesktop'
 import { NavBarMobile } from './NavBarMobile'
@@ -14,7 +14,9 @@ const Header = () => {
     }
   }
 
-  window.addEventListener('resize', handleResize)
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+  }, [handleResize])
 
   return <header>{!isMobile ? <NavBarDesktop /> : <NavBarMobile />}</header>
 }
