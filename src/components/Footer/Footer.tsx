@@ -1,12 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="flex justify-between lg:justify-around items-center px-3 py-4 bg-darkblue">
-      <section className="p-1 rounded-md text-slate-100">
-        <h2 className="text-2xl lg:text-4xl font-bold">Erick</h2>
-        <h2 className="text-lg lg:text-2xl font-bold">Gzz</h2>
-      </section>
-
-      <section className="flex gap-2 lg:gap-6">
+    <footer className="bg-white flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0 md:justify-around w-full p-4">
+      <div>
+        <p className="text-gray-800 text-center md:text-left">
+          &copy; 2022
+          <span className="text-gray-900 font-bold">Erick Gzz.</span> Todos los
+          derechos reservados.
+        </p>
+      </div>
+      <div className="flex flex-row gap-4 items-center">
         <a
           href="https://www.linkedin.com/in/erick-gzz/"
           target="_blank"
@@ -32,7 +34,7 @@ const Footer = () => {
             className="w-6 lg:w-8 h-auto"
           />
         </a>
-      </section>
+      </div>
     </footer>
   )
 }

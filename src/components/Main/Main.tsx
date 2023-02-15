@@ -1,3 +1,5 @@
+import { RiUserLine } from 'react-icons/ri'
+
 const Main = () => {
   return (
     // <main className="flex-1 px-3 py-4">
@@ -65,30 +67,54 @@ const Main = () => {
         <form className="flex flex-col gap-3 w-1/2">
           <h2>Get in Touch</h2>
 
-          <section className="flex flex-col gap-1">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
+          <section className="flex flex-col gap-4">
+            <div className="w-full relative">
+              <RiUserLine className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-4" />
+              <input
+                className="w-full bg-gray-100 py-2 pl-10 pr-4 rounded-lg outline-none"
+                placeholder="Name"
+              />
+            </div>
 
-            <label htmlFor="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" />
+            <div className="w-full relative">
+              <RiUserLine className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-4" />
+              <input
+                className="w-full bg-gray-100 py-2 pl-10 pr-4 rounded-lg outline-none"
+                placeholder="Last Name"
+              />
+            </div>
           </section>
 
-          <section className="flex flex-col">
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" />
+          <section className="flex flex-col gap-4">
+            <div className="w-full relative">
+              <RiUserLine className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-4" />
+              <input
+                className="w-full bg-gray-100 py-2 pl-10 pr-4 rounded-lg outline-none"
+                placeholder="Email"
+                type={'email'}
+              />
+            </div>
 
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" />
+            <div className="w-full relative">
+              <RiUserLine className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-4" />
+              <input
+                className="w-full bg-gray-100 py-2 pl-10 pr-4 rounded-lg outline-none"
+                placeholder="+XX XXX XXX XXXX"
+                type={'tel'}
+              />
+            </div>
           </section>
 
           <section className="flex flex-col gap-1">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="">
+              Message
+            </label>
             <textarea
               name="message"
               id="message"
               cols={30}
               rows={10}
-              className="w-full resize-none"
+              className="w-full bg-gray-100 py-2 pl-10 pr-4 rounded-lg outline-none resize-none"
             />
           </section>
 
